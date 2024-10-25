@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
+            $table->string('Azienda');
+            $table->string('Stazione_partenza');
+            $table->string('Stazione_arrivo');
+            $table->time('Orario_partenza');
+            $table->time('Orario_arrivo');
+            $table->string('Cod_treno');
+            $table->integer('Num_carrpzze');
+            $table->boolean('In_orario');
+            $table->boolean('Cancellato');
             $table->timestamps();
         });
     }
